@@ -8,7 +8,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation }));
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/createuser`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/createuser`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
